@@ -3,7 +3,7 @@ if text.isnumeric():
     print("Pls enter valid string")
     exit()
 
-key = int(input("Enter a key:- "))
+key = int(input("Enter a key between 1 to 25 :- "))
 if key <1 or key >= 26:
     print("Enter between 1 to 25 ")
     exit()
