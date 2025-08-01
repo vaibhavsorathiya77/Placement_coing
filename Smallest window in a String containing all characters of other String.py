@@ -32,7 +32,7 @@ for i in range(len(s)):
             if len(window) < min_len:
                 min_len = len(window)
                 min_substring = window
-
+    
 print(f"Smallest substring containing '{to_find}': {min_substring}")
 
         
