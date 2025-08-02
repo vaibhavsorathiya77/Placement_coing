@@ -32,3 +32,11 @@ if check_anagram(s1) == check_anagram(s2):
     print("Yes the string is anagram")
 else:
     print("No the the string is not anagram")
+
+# # using sorted
+# s1="vai"
+# s2="iav"
+# if sorted(s1) == sorted(s2):
+#     print(True)
+# else:
+#     print(False)
