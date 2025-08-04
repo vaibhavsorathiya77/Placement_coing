@@ -3,17 +3,14 @@
 # Input: [1, 2]  
 # Output: [[], [1], [2], [1,2]]
 
-def subsets(nums):
-    result=[]
-    def backtract(index,path):
-        result.append(path[:])
+nums = [1,2]
+result = [[]]
 
-        for i in range(index,len(nums)):
-            path.append(nums[i])
-            backtract(i+1,path)
-            path.pop()
-
-    backtract(0,[])
-    return result
-
-print(subsets([1,2]))
+for num in nums:
+    subsets = []
+    for sub in result:
+        sub = sub + [num]
+        subsets.append(sub)
+    result.extend(subsets)
+    
+print(result)
