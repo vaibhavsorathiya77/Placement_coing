@@ -87,8 +87,8 @@ print(res)
 
 num = ''
 intre = 1994
-for j , sz in roman_map:
+for j , symbol in roman_map:
     while intre >= j:
-        num += sz
+        num += symbol
         intre -= j
 print(num)
