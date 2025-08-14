@@ -102,23 +102,99 @@
 
 # Output: False
 
-data = "()[]{}"
-stack = []
-pairs = {
-    ')' : '(',
-    ']' : '[',
-    '}' : '{'
-}
+# data = "()[]{}"
+# stack = []
+# pairs = {
+#     ')' : '(',
+#     ']' : '[',
+#     '}' : '{'
+# }
 
-for i in data:
-    if i in '([{':
-        stack.append(i)
-    elif i in ')]}':
-        if not stack:
-            print(False)
-            break
-        elif stack.pop() != pairs[i]:
-            print(False)
-            break
-else:
-    print(len(stack)==0)
+# for i in data:
+#     if i in '([{':
+#         stack.append(i)
+#     elif i in ')]}':
+#         if not stack:
+#             print(False)
+#             break
+#         elif stack.pop() != pairs[i]:
+#             print(False)
+#             break
+# else:
+#     print(len(stack)==0)
+
+
+
+# roman to interger 
+# Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M.
+
+# Symbol       Value
+# I             1
+# V             5
+# X             10
+# L             50
+# C             100
+# D             500
+# M             1000
+# For example, 2 is written as II in Roman numeral, just two ones added together.
+#  12 is written as XII, which is simply X + II. The number 27 is written as XXVII, which is XX + V + II.
+
+# s = "XII"
+
+# data = {
+#     'I':1,
+#     "V":5,
+#     "X":10,
+#     "L":50,
+#     "C":100,
+#     "D":500,
+#     "M":1000
+# }
+
+# res = 0
+
+# for i in range(len(s)):
+#     if i + 1 < len(s) and data[s[i]] < data[s[i+1]]:
+#         res-= data[s[i]]
+#     else:
+# #         res+=data[s[i]]
+# # print(f"{s} in integer form is :- {res}")
+
+# s = "abcabccd"
+# l = 0
+# long = 0
+# sett = set()
+
+# for r in range(len(s)):
+#     while s[r] in sett:
+#         sett.remove(s[l])
+#         l+=1
+#     sett.add(s[r])
+#     long = max(long,r-l+1)
+# print(long) 
+
+# s = "abcabcbb"
+# l = 0  # left pointer
+# sett = set()
+# max_len = 0
+# substring = ""
+# temp = []
+# for r in range(len(s)):  # r = right pointer
+#     while s[r] in sett:  # shrink until no repeat
+#         sett.remove(s[l])
+#         l += 1
+    
+#     sett.add(s[r])
+
+#     # If new window is bigger, update answer
+#     if (r - l + 1) > max_len:
+#         max_len = r - l + 1
+#         substring = s[l:r+1]
+
+# # print("Length:", max_len)
+# print("Substring:", substring)
+
+# for ch in substring:
+#     if ch == ch[::-1]:
+#         temp.append[ch]
+# print()

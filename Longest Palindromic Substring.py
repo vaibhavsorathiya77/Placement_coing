@@ -17,7 +17,7 @@
 # Explanation: No multi-letter palindromes exist. So the first character "a" is returned as the longest palindromic substring.
 
 
-s = 'abcdxyzyxabcdeffedcbaabcdefghijklmnopqrstuvwxyzyxwvutsrqponmlkjihgfedcba'
+s = 'Geeks'
 sub=[]
 temp=[]
 for i in range(len(s)):
@@ -27,5 +27,5 @@ for i in range(len(s)):
 for ch in sub:
     if ch == ch[::-1]:
         temp.append(ch)
-
 print(f"Longest substring with palindrome is {max(temp,key=len)}")
+print(temp)
