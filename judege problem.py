@@ -44,3 +44,4 @@ for x in nums:
         i+=1
 
 print("len",i,", nums:- ",nums[:i])
+
