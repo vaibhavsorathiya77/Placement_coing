@@ -1,5 +1,7 @@
 text = input("Enter the text:- ")
 depth = int(input("Enter the depth:- "))
+if depth == 1:exit("depth value should be greater than 1")
+
 text = text.replace(" ", "")
 
 rows = [""] * depth
@@ -18,7 +20,7 @@ for ch in text:
     row += step
 
 for r in rows:
-    print(r)
+    print(r) 
 
 res = "".join([r.replace(" ", "") for r in rows])
 print(f"Encrypted text:- {res}")
