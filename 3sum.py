@@ -23,3 +23,5 @@ for i in range(len(arr)):
         for k in range(j+1,len(arr)):
             if arr[i] + arr[j] + arr[k] == 0:
                 print(f"{arr[i]} + {arr[j]} + {arr[k]} = 0 (indices: {i},{j},{k})")
+
+                
