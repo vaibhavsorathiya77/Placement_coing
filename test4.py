@@ -66,25 +66,66 @@
 # # Output: False
 
 
+# n=123
+# print (int(str(n)[::-1]))
 
-input = ["A-B", "A-C", "B-D"]
+# input = ["A-B", "A-C", "B-D"]
 
-parent_count={}
-child_count = {}
+# parent_count={}
+# child_count = {}
 
-for w in input:
-    parent,child = w.split('-')
+# for w in input:
+#     parent,child = w.split('-')
 
-    if parent in parent_count:
-        parent_count[parent] +=1
+#     if parent in parent_count:
+#         parent_count[parent] +=1
+#     else:
+#         parent_count[parent] =1
+#     if child in child_count:
+#         child_count[child] +=1
+#     else:
+#         child_count[child] =1
+#     if parent_count[parent] >2 or child_count[child] > 1:
+#         print(False)
+#         break
+# else:
+#     print(True)
+
+
+
+key = "IVXLCDM"
+value = [1,5,10,50,100,500,1000]
+
+symbol = dict(zip(key,value))
+
+s = "DCCLXV"
+result = 0
+for i in range(len(s)-1):
+    current = symbol[s[i]]
+    next = symbol[s[i+1]]
+    if current<next:
+        result -= current 
     else:
-        parent_count[parent] =1
-    if child in child_count:
-        child_count[child] +=1
-    else:
-        child_count[child] =1
-    if parent_count[parent] >2 or child_count[child] > 1:
-        print(False)
-        break
-else:
-    print(True)
+        result += current
+
+result = result + symbol[s[-1]]
+print(result)
+
+
+# n = 25
+# left = 0
+# right = n
+# ans = 0
+
+# while left<=right:
+#     mid = (left+right)//2
+#     sq = mid*mid
+#     if sq == n:
+#         ans = mid
+#         break
+#     elif sq<n:
+#         ans = mid
+#         left = mid +1
+#     else:
+#         right = mid - 1
+# print (ans)
